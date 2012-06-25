@@ -45,8 +45,8 @@ public class SignalHandler extends DefaultHandler {
 			String acg = new String(ch, start, length);
 			// FIXME: Why +3? Why is there an empty e2acg event?
 			if (acg.length() > 3) {
-				signal.setAcg(Integer.parseInt(acg.subSequence(0,
-						acg.length() - 4).toString()));
+				signal.setAcg(Integer.parseInt(acg.subSequence(3,
+						acg.length() - 2).toString()));
 			}
 		}
 	}
